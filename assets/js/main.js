@@ -1,1 +1,7 @@
-console.log('2322Test');
+$(document).ready(function(){
+  $('.header-slider').slick({
+    
+    swipe: true,
+
+  });
+});

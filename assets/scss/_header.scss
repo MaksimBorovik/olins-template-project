@@ -60,13 +60,13 @@
           }
 
           span {
+            margin-bottom: 20px;
             color: #7f5568;
             font-size: 21px;
             font-style: italic;
             font-family: 'Playfair Display', serif;
             line-height: 1;
             display: block;
-            margin-bottom: 20px;
           }
 
           h2 {
@@ -77,6 +77,7 @@
             font-weight: 900;
             text-transform: uppercase;
             line-height: 1.1;
+            text-shadow:rgba(255, 255, 255, 0.75) 0 0 1px;;
           }
 
           &-link {
@@ -180,5 +181,48 @@
         }
       }
     }
+  }
+}
+
+.slick-prev {
+  font-size: 0;
+  background: rgba(0, 0, 0, 0.1) url(../img/left.svg) center center no-repeat;;
+  width: 42px;
+  height: 42px;
+  display: block;
+  border-radius: 100%;
+  border: none;
+  position: absolute;
+  top: 50%;
+  margin-top: -66px; // 21px + 45px =  чтобы стало по центру, так как размер самой кнопки 42px и 90px - размер меню которое находится поверх слайдера
+  margin-left: 45px;
+  cursor: pointer;
+  z-index: 1;
+
+  &:hover {
+    background: #fee489 url(../img/left_hover.svg) center center no-repeat;
+  }
+}
+
+.slick-next {
+  font-size: 0;
+  background: rgba(0, 0, 0, 0.1) url(../img/left.svg) center center no-repeat;;
+  width: 42px;
+  height: 42px;
+  display: block;
+  border-radius: 100%;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -66px; // 21px + 45px =  чтобы стало по центру, так как размер самой кнопки 42px и 90px - размер меню которое находится поверх слайдера
+  margin-right: 45px;
+  cursor: pointer;
+  z-index: 1;
+  // transform: rotate(180deg); // нам не подходит
+  transform: scale(-1, 1); // Зеркальное отражение по горизонтали.
+
+  &:hover {
+    background: #fee489 url(../img/left_hover.svg) center center no-repeat;
   }
 }

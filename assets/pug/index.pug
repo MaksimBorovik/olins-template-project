@@ -4,16 +4,17 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title OLINS SHOP
     link(href="https://fonts.googleapis.com/css?family=Playfair+Display:400i|Raleway:400,500,700,900,900i&display=swap" rel="stylesheet")
     link(rel="stylesheet", href="assets/css/style.css")
-    title OLINS SHOP
+    link(rel="stylesheet", href="libs/slick/slick.css")
   body
     header(class="header")
       .header-slider
         .header-slider__item
           figure
             //- img(src="assets/img/slider.jpg", alt="slider-image")
-            div(class="header-slider__item-image"  style="background-image: url(assets/img/slider.jpg)")
+            div(class="header-slider__item-image"  style="background-image: url(assets/img/slider1.jpg)")
             figcaption.header-slider__item-category
               .header-slider__item-category-info
                 span announcement
@@ -26,22 +27,38 @@ html(lang="en")
                   svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px") 
                     path(fill-rule="evenodd"  fill="rgb(254, 228, 137)" d="M9.165,4.946 C9.165,5.274 8.996,5.549 8.751,5.729 L5.489,8.990 C5.104,9.376 4.480,9.376 4.095,8.990 C3.710,8.605 3.710,7.981 4.095,7.596 L5.758,5.933 L1.277,5.933 C0.732,5.933 0.291,5.492 0.291,4.946 C0.291,4.402 0.732,3.961 1.277,3.961 L5.857,3.961 L4.094,2.198 C3.709,1.812 3.709,1.188 4.094,0.803 C4.479,0.418 5.104,0.418 5.489,0.803 L8.867,4.181 C9.043,4.357 9.123,4.583 9.138,4.813 C9.145,4.858 9.165,4.899 9.165,4.946 Z")
                   a(href="#") Details
-        //- .header-slider__item
-        //-   figure
-        //-     img(src="assets/img/slider.jpg", alt="slider-image")
-        //-     figcaption.header-slider__item-category
-        //-       .header-slider__item-category-info
-                    span announcement
-                    h2 There are many variations of passages of Lorem Ipsum
-                    a(href="#") Details
-        //- .header-slider__item
-        //-   figure
-        //-     img(src="assets/img/slider.jpg", alt="slider-image")
-        //-     figcaption.header-slider__item-category
-        //-       .header-slider__item-category-info
-                    span announcement
-                    h2 There are many variations of passages of Lorem Ipsum
-                    a(href="#") Details
+        .header-slider__item
+          figure
+            //- img(src="assets/img/slider.jpg", alt="slider-image")
+            div(class="header-slider__item-image"  style="background-image: url(assets/img/slider2.jpg)")
+            figcaption.header-slider__item-category
+              .header-slider__item-category-info
+                span announcement
+                h2 There are many 
+                  br
+                  | variations of passages 
+                  br
+                  | of Lorem Ipsum
+                .header-slider__item-category-info-link
+                  svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px") 
+                    path(fill-rule="evenodd"  fill="rgb(254, 228, 137)" d="M9.165,4.946 C9.165,5.274 8.996,5.549 8.751,5.729 L5.489,8.990 C5.104,9.376 4.480,9.376 4.095,8.990 C3.710,8.605 3.710,7.981 4.095,7.596 L5.758,5.933 L1.277,5.933 C0.732,5.933 0.291,5.492 0.291,4.946 C0.291,4.402 0.732,3.961 1.277,3.961 L5.857,3.961 L4.094,2.198 C3.709,1.812 3.709,1.188 4.094,0.803 C4.479,0.418 5.104,0.418 5.489,0.803 L8.867,4.181 C9.043,4.357 9.123,4.583 9.138,4.813 C9.145,4.858 9.165,4.899 9.165,4.946 Z")
+                  a(href="#") Details
+        .header-slider__item
+          figure
+            //- img(src="assets/img/slider.jpg", alt="slider-image")
+            div(class="header-slider__item-image"  style="background-image: url(assets/img/slider3.jpg)")
+            figcaption.header-slider__item-category
+              .header-slider__item-category-info
+                span announcement
+                h2 There are many 
+                  br
+                  | variations of passages 
+                  br
+                  | of Lorem Ipsum
+                .header-slider__item-category-info-link
+                  svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px") 
+                    path(fill-rule="evenodd"  fill="rgb(254, 228, 137)" d="M9.165,4.946 C9.165,5.274 8.996,5.549 8.751,5.729 L5.489,8.990 C5.104,9.376 4.480,9.376 4.095,8.990 C3.710,8.605 3.710,7.981 4.095,7.596 L5.758,5.933 L1.277,5.933 C0.732,5.933 0.291,5.492 0.291,4.946 C0.291,4.402 0.732,3.961 1.277,3.961 L5.857,3.961 L4.094,2.198 C3.709,1.812 3.709,1.188 4.094,0.803 C4.479,0.418 5.104,0.418 5.489,0.803 L8.867,4.181 C9.043,4.357 9.123,4.583 9.138,4.813 C9.145,4.858 9.165,4.899 9.165,4.946 Z")
+                  a(href="#") Details
       nav.header-menu
         a.header-menu__logo(href="#") Olins
         ul.header-menu__list
@@ -66,3 +83,7 @@ html(lang="en")
       section
       section
     footer
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(src="libs/slick/slick.min.js")
+    script(src="assets/js/main.js")
+    
