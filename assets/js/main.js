@@ -1,7 +1,6 @@
 $(document).ready(function(){
   $('.header-slider').slick({
-    
-    swipe: true,
-
+    autoplay: true,
+    dots: true
   });
 });
