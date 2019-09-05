@@ -575,9 +575,6 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .header-menu__logo {
@@ -589,11 +586,14 @@ template {
   font-style: italic;
   font-weight: 900;
   text-decoration: none;
+  width: 20%;
 }
 
 .header-menu__list {
   padding-left: 0;
   font-size: 0;
+  width: 60%;
+  text-align: center;
 }
 
 .header-menu__list-item {
@@ -630,6 +630,10 @@ template {
       -ms-flex-align: center;
           align-items: center;
   margin-right: 45px;
+  width: 20%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .header-menu__cart a {

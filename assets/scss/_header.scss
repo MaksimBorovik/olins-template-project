@@ -109,7 +109,6 @@
     background-color: rgba(115, 72, 92, 0.9);
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
     &__logo {
       margin-left: 45px;
@@ -120,11 +119,14 @@
       font-style: italic;
       font-weight: 900;
       text-decoration: none;
+      width: 20%;
     }
 
     &__list {
       padding-left: 0;
       font-size: 0; // 1 Убираем отступы между li
+      width: 60%;
+      text-align: center;
 
       &-item {
         display: inline-block; // 0 Убираем отступы между li
@@ -155,6 +157,8 @@
       display: flex;
       align-items: center;
       margin-right: 45px;
+      width: 20%;
+      justify-content: flex-end;
 
       a {
         display: block;
