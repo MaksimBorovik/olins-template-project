@@ -1,0 +1,136 @@
+.main {
+
+  &-about {
+    display: flex;
+    align-items: stretch;
+
+    &__image {
+      width: 50%;
+      background-size: cover;
+    }
+
+    &__hello {
+      padding: 133px 125px 125px 90px;
+      width: 50%;
+
+      span {
+        font-size: 25px;
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        line-height: 1;
+      }
+
+      h3 {
+        margin-top: 15px;
+        margin-bottom: 30px;
+        font-size: 37px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+      }
+
+      p {
+        line-height: 24px;
+      }
+    }
+  }
+
+  &-features {
+    display: flex;
+    align-items: stretch; // всегда задан по умолчанию, можно не писать
+
+    &__advantages {
+      width: 50%;
+      padding: 0 90px 0 125px;
+      display: flex;
+      align-items: center;
+
+      &-list {
+
+        &-item {
+          margin-top: 30px;
+          margin-bottom: 30px;
+          margin-right: 80px;
+          width: calc(50% - 80px);
+          list-style: url(../img/dot.svg);
+          float: left; // TODO: flex-box
+
+          h3 {
+            margin-top: 0;
+            margin-bottom: 23px;
+            font-size: 16px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 900;
+          }
+
+          p {
+            font-size: 12px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+
+    &__team {
+      width: 50%;
+      background-color: #b7e3b9;
+      position: relative;
+      padding: 100px 125px 65px 90px;
+
+      &-slider-item {
+        width: 33.33%;
+
+        figure {
+          margin: 0;
+        }
+
+        &-image {
+          max-width: 100%;
+        }
+
+        &-caption {
+          text-align: center;
+
+
+          h4 {
+            margin-top: 27px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 800;
+          }
+
+          span {
+            font-family: 'Questrial', sans-serif;
+            font-size: 10px;
+            text-transform: uppercase;
+            line-height: 18px;
+          }
+        }
+      }
+
+      &-buttons {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -38px;
+
+        &-prev,
+        &-next {
+          width: 38px;
+          height: 38px;
+          background: #ec9b9b url(../img/left.svg) center center no-repeat;
+          display: block;
+          border: 0;
+
+          &:hover {
+            background-color: #fee489
+          }
+        }
+
+        &-next {
+          transform: scale(-1, 1);
+        }
+      }
+    }
+  }
+}

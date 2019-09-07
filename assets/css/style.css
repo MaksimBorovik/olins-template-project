@@ -461,6 +461,21 @@ template {
 /* md */
 /* sm */
 /* xs */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  color: #898989;
+  margin: 0;
+}
+
 .header {
   position: relative;
 }
@@ -659,7 +674,8 @@ template {
   transition: all 0.3s ease-in-out;
 }
 
-.slick-prev {
+.slick-prev,
+.slick-next {
   font-size: 0;
   background: rgba(0, 0, 0, 0.1) url(../img/left.svg) center center no-repeat;
   width: 42px;
@@ -675,30 +691,159 @@ template {
   z-index: 1;
 }
 
-.slick-prev:hover {
+.slick-prev:hover,
+.slick-next:hover {
   background: #fee489 url(../img/left_hover.svg) center center no-repeat;
 }
 
 .slick-next {
-  font-size: 0;
-  background: rgba(0, 0, 0, 0.1) url(../img/left.svg) center center no-repeat;
-  width: 42px;
-  height: 42px;
-  display: block;
-  border-radius: 100%;
-  border: none;
-  position: absolute;
   right: 0;
-  top: 50%;
-  margin-top: -66px;
   margin-right: 45px;
-  cursor: pointer;
   z-index: 1;
   -webkit-transform: scale(-1, 1);
       -ms-transform: scale(-1, 1);
           transform: scale(-1, 1);
 }
 
-.slick-next:hover {
-  background: #fee489 url(../img/left_hover.svg) center center no-repeat;
+.main-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.main-about__image {
+  width: 50%;
+  background-size: cover;
+}
+
+.main-about__hello {
+  padding: 133px 125px 125px 90px;
+  width: 50%;
+}
+
+.main-about__hello span {
+  font-size: 25px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  line-height: 1;
+}
+
+.main-about__hello h3 {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-size: 37px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
+.main-about__hello p {
+  line-height: 24px;
+}
+
+.main-features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.main-features__advantages {
+  width: 50%;
+  padding: 0 90px 0 125px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-features__advantages-list-item {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 80px;
+  width: calc(50% - 80px);
+  list-style: url(../img/dot.svg);
+  float: left;
+}
+
+.main-features__advantages-list-item h3 {
+  margin-top: 0;
+  margin-bottom: 23px;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+}
+
+.main-features__advantages-list-item p {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.main-features__team {
+  width: 50%;
+  background-color: #b7e3b9;
+  position: relative;
+  padding: 100px 125px 65px 90px;
+}
+
+.main-features__team-slider-item {
+  width: 33.33%;
+}
+
+.main-features__team-slider-item figure {
+  margin: 0;
+}
+
+.main-features__team-slider-item-image {
+  max-width: 100%;
+}
+
+.main-features__team-slider-item-caption {
+  text-align: center;
+}
+
+.main-features__team-slider-item-caption h4 {
+  margin-top: 27px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.main-features__team-slider-item-caption span {
+  font-family: 'Questrial', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 18px;
+}
+
+.main-features__team-buttons {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -38px;
+}
+
+.main-features__team-buttons-prev, .main-features__team-buttons-next {
+  width: 38px;
+  height: 38px;
+  background: #ec9b9b url(../img/left.svg) center center no-repeat;
+  display: block;
+  border: 0;
+}
+
+.main-features__team-buttons-prev:hover, .main-features__team-buttons-next:hover {
+  background-color: #fee489;
+}
+
+.main-features__team-buttons-next {
+  -webkit-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+          transform: scale(-1, 1);
 }
