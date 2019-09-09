@@ -717,6 +717,7 @@ p {
 .main-about__image {
   width: 50%;
   background-size: cover;
+  background-position-x: center;
 }
 
 .main-about__hello {
@@ -792,6 +793,10 @@ p {
   padding: 100px 125px 65px 90px;
 }
 
+.main-features__team-slider {
+  width: 100%;
+}
+
 .main-features__team-slider-item {
   width: 33.33%;
 }
@@ -800,8 +805,57 @@ p {
   margin: 0;
 }
 
-.main-features__team-slider-item-image {
-  max-width: 100%;
+.main-features__team-slider-item-wrapper {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-features__team-slider-item-wrapper-inline-block {
+  position: relative;
+  display: inline-block;
+}
+
+.main-features__team-slider-item-wrapper-inline-block:hover .main-features__team-slider-item-spoiler,
+.main-features__team-slider-item-wrapper-inline-block:focus .main-features__team-slider-item-spoiler {
+  bottom: 0;
+}
+
+.main-features__team-slider-item-spoiler {
+  position: absolute;
+  bottom: -60px;
+  right: 0;
+  left: 0;
+  height: 60px;
+  background-color: rgba(74, 99, 74, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: bottom 0.3s ease-in-out;
+  -o-transition: bottom 0.3s ease-in-out;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.main-features__team-slider-item-spoiler .icon-twitter-circled {
+  display: block;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.main-features__team-slider-item-spoiler .icon-facebook-circled {
+  display: block;
+  font-size: 20px;
+  color: #ffffff;
 }
 
 .main-features__team-slider-item-caption {
@@ -846,4 +900,196 @@ p {
   -webkit-transform: scale(-1, 1);
       -ms-transform: scale(-1, 1);
           transform: scale(-1, 1);
+}
+
+.main-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.main-contact__shop {
+  padding: 130px 90px 130px 125px;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.main-contact__shop-left-part h4 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 47px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+}
+
+.main-contact__shop-left-part a {
+  padding: 13px 20px;
+  border: 4px solid #000000;
+  font-size: 11px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 11px;
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 5px;
+  color: #000000;
+}
+
+.main-contact__shop-right-part {
+  margin-right: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-contact__shop-right-part-title {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+  text-align: right;
+}
+
+.main-contact__shop-right-part-price {
+  display: block;
+  margin-left: 8px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #fee489;
+  text-align: center;
+  line-height: 64px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main-contact__feedback {
+  padding: 75px 100px 60px 90px;
+  width: 50%;
+  background-size: cover;
+  background-position-x: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-contact__feedback-form {
+  width: 54.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main-contact__feedback-form h4 {
+  margin-top: 0;
+  margin-bottom: 35px;
+  font-size: 37px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.main-contact__feedback-form-text, .main-contact__feedback-form-email {
+  border: 0;
+  height: 55px;
+  width: calc(50% - 7px);
+  border-top: 1px solid #eaedee;
+  padding-left: 20px;
+  color: #898989;
+  font-size: 12px;
+  font-family: 'Raleway', sans-serif;
+  background-color: #f7fafb;
+}
+
+.main-contact__feedback-form-text:nth-child(2), .main-contact__feedback-form-email:nth-child(2) {
+  margin-left: 10px;
+}
+
+.main-contact__feedback-form textarea {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 20px;
+  width: 100%;
+  height: 100px;
+  background-color: #f7fafb;
+}
+
+.main-contact__feedback-form-submit {
+  padding: 18px 35px;
+  border: 0;
+  background-color: #fee489;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.main-contact__feedback-twitter {
+  width: 37%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-contact__feedback-twitter-login {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 25px;
+  font-family: 'Raleway', sans-serif;
+  color: #a2a2a2;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.main-contact__feedback-twitter p {
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: #000000;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.main-contact__feedback-twitter-date {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 10px;
+  color: #a2a2a2;
 }

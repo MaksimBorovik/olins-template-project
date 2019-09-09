@@ -5,7 +5,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title OLINS SHOP
-    link(href="https://fonts.googleapis.com/css?family=Playfair+Display:400i|Questrial|Raleway:400,500,700,800,900,900i&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Playfair+Display:400i|Questrial|Raleway:400,500,500i,700,800,900,900i&display=swap" rel="stylesheet")
     link(rel="stylesheet", href="assets/css/style.css")
     link(rel="stylesheet", href="libs/slick/slick.css")
     link(rel="stylesheet", href="libs/slick/slick-theme.css")
@@ -116,52 +116,109 @@ html(lang="en")
           .main-features__team-slider
             .main-features__team-slider-item
               figure
-                img(src="assets/img/team_1.jpg", alt="team-image").main-features__team-slider-item-image
-                .main-features__team-slider-item-spoiler
-                  a(href="#")
-                    i.icon-twitter-circled
-                  a(href="#")
-                    i.icon-facebook-circled
+                .main-features__team-slider-item-wrapper
+                  .main-features__team-slider-item-wrapper-inline-block
+                    img(src="assets/img/team_1.jpg", alt="team-image").main-features__team-slider-item-image
+                    .main-features__team-slider-item-spoiler
+                      a(href="#")
+                        i.icon-twitter-circled
+                      a(href="#")
+                        i.icon-facebook-circled
                 figcaption.main-features__team-slider-item-caption
                   h4 Aubrey Ramirez
                   span designer
             .main-features__team-slider-item
               figure
-                img(src="assets/img/team_2.jpg", alt="team-image").main-features__team-slider-item-image
-                .main-features__team-slider-item-spoiler
-                  a(href="#")
-                    i.icon-twitter-circled
-                  a(href="#")
-                    i.icon-facebook-circled
+                .main-features__team-slider-item-wrapper
+                  .main-features__team-slider-item-wrapper-inline-block
+                    img(src="assets/img/team_2.jpg", alt="team-image").main-features__team-slider-item-image
+                    .main-features__team-slider-item-spoiler
+                      a(href="#")
+                        i.icon-twitter-circled
+                      a(href="#")
+                        i.icon-facebook-circled
                 figcaption.main-features__team-slider-item-caption
                   h4 Aubrey Ramirez
                   span designer
             .main-features__team-slider-item
               figure
-                img(src="assets/img/team_3.jpg", alt="team-image").main-features__team-slider-item-image
-                .main-features__team-slider-item-spoiler
-                  a(href="#")
-                    i.icon-twitter-circled
-                  a(href="#")
-                    i.icon-facebook-circled
+                .main-features__team-slider-item-wrapper
+                  .main-features__team-slider-item-wrapper-inline-block
+                    img(src="assets/img/team_3.jpg", alt="team-image").main-features__team-slider-item-image
+                    .main-features__team-slider-item-spoiler
+                      a(href="#")
+                        i.icon-twitter-circled
+                      a(href="#")
+                        i.icon-facebook-circled
                 figcaption.main-features__team-slider-item-caption
                   h4 Aubrey Ramirez
                   span designer
             .main-features__team-slider-item
               figure
-                img(src="assets/img/team_3.jpg", alt="team-image").main-features__team-slider-item-image
-                .main-features__team-slider-item-spoiler
-                  a(href="#")
-                    i.icon-twitter-circled
-                  a(href="#")
-                    i.icon-facebook-circled
+                .main-features__team-slider-item-wrapper
+                  .main-features__team-slider-item-wrapper-inline-block
+                    img(src="assets/img/team_1.jpg", alt="team-image").main-features__team-slider-item-image
+                    .main-features__team-slider-item-spoiler
+                      a(href="#")
+                        i.icon-twitter-circled
+                      a(href="#")
+                        i.icon-facebook-circled
+                figcaption.main-features__team-slider-item-caption
+                  h4 Aubrey Ramirez
+                  span designer
+            .main-features__team-slider-item
+              figure
+                .main-features__team-slider-item-wrapper
+                  .main-features__team-slider-item-wrapper-inline-block
+                    img(src="assets/img/team_2.jpg", alt="team-image").main-features__team-slider-item-image
+                    .main-features__team-slider-item-spoiler
+                      a(href="#")
+                        i.icon-twitter-circled
+                      a(href="#")
+                        i.icon-facebook-circled
+                figcaption.main-features__team-slider-item-caption
+                  h4 Aubrey Ramirez
+                  span designer
+            .main-features__team-slider-item
+              figure
+                .main-features__team-slider-item-wrapper
+                  .main-features__team-slider-item-wrapper-inline-block
+                    img(src="assets/img/team_3.jpg", alt="team-image").main-features__team-slider-item-image
+                    .main-features__team-slider-item-spoiler
+                      a(href="#")
+                        i.icon-twitter-circled
+                      a(href="#")
+                        i.icon-facebook-circled
                 figcaption.main-features__team-slider-item-caption
                   h4 Aubrey Ramirez
                   span designer
       section.main-contact
-        .main-contact__shop
-        .main-contact__feedback
-    footer
+        .main-contact__shop(style="background-image: url(assets/img/shop.jpg);")
+          .main-contact__shop-left-part
+            h4 NEW
+              br
+              | OLINS SHOP
+            a(href="#") Details
+          .main-contact__shop-right-part
+            span.main-contact__shop-right-part-title Red
+              br
+              | Blouse
+            span.main-contact__shop-right-part-price  €25
+        .main-contact__feedback(style="background-image: url(assets/img/twitter.jpg);")
+          .main-contact__feedback-form
+            h4 Contact us
+            form(action="form.php" method="post")
+              input(type="text" placeholder="Your name" class="main-contact__feedback-form-text")
+              input(type="email" placeholder="E-mail" class="main-contact__feedback-form-email")
+              textarea(name="" cols="20" rows="3" placeholder="Your message...")
+              input(type="submit" value="submit" class="main-contact__feedback-form-submit")
+          .main-contact__feedback-twitter
+            img(src="assets/img/twitter_icon.png", alt="twitter-icon")
+            span.main-contact__feedback-twitter-login @Olins
+            p It is a long established fact that a reader will be distracted by the readable content
+            span.main-contact__feedback-twitter-date 1 day ago
+    footer.footer
+
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
     script(src="libs/slick/slick.min.js")
     script(src="assets/js/main.js")
