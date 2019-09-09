@@ -1,3 +1,5 @@
 
+.icon-flickr-circled:before { content: '\f304'; } /* '' */
 .icon-twitter-circled:before { content: '\f30a'; } /* '' */
 .icon-facebook-circled:before { content: '\f30d'; } /* '' */
+.icon-pinterest-circled:before { content: '\f313'; } /* '' */

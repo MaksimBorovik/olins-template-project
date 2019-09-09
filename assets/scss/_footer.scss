@@ -1,0 +1,117 @@
+.footer {
+  min-height: 185px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #73485c;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: 'olins';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #774c60;
+    font-family: 'Raleway', sans-serif;
+    font-size: 400px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 250px;
+    z-index: 0;
+  }
+
+  &__left {
+    padding-left: 125px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    z-index: 1;
+
+    &-info {
+      flex-basis: 27%;
+      color: #9c7588;
+      font-size: 11px;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      line-height: 1.2;
+    }
+
+    &-contacts {
+      flex-basis: 27%;
+      color: #9c7588;
+      font-size: 11px;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      line-height: 1.2;
+
+      &-phone {
+        display: block;
+        font-size: 18px;
+        color: #ffffff;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      &-adress {
+        display: block;
+        font-size: 14px;
+        color: #ffffff;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+    }
+
+    &-navigation {
+      flex-basis: 33%;
+
+
+      &-list {
+        margin: 0;
+        margin-right: -40px;
+        padding-left: 0;
+        height: 80px;
+        list-style: none;
+        column-count: 2;
+
+        &-item {
+          font-size: 10px;
+          font-family: 'Raleway', sans-serif;   
+          font-weight: 700;
+          line-height: 26px;
+          color: #fee489;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    padding-right: 125px;
+    width: 50%;
+    text-align: right;
+    z-index: 1;
+
+    &-social {
+      
+      a {
+        margin-left: 27px;
+        font-size: 25px;
+        color: rgba(255, 255, 255, 0.5);
+        transition: color 0.3s;
+
+        &:hover {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+}

@@ -218,7 +218,30 @@ html(lang="en")
             p It is a long established fact that a reader will be distracted by the readable content
             span.main-contact__feedback-twitter-date 1 day ago
     footer.footer
-
+      .footer__left
+        .footer__left-info
+          p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a ore-or-less normal distribution of letters
+        .footer__left-contacts
+          span.footer__left-contacts-phone 8 800 435-37-90
+          span.footer__left-contacts-adress France, Marseille, Main street
+          p.footer__lefs-contacts-copyrights © 2019 - All Rights Reserved
+        nav.footer__left-navigation
+          - var items = ['ABOUT OLINS', 'PRIVACY POLICY','TERMS & CONDITIONS','CONTACT US', 'INFORMATION', 'SITE MAP']
+            ul.footer__left-navigation-list
+              - for (var i=0; i<items.length; i++) {     
+                  li
+                    a(href="#").footer__left-navigation-list-item= items[i]
+              - }
+      .footer__right
+        .footer__right-social
+          a(href="#" class=".footer__right-social-flickr")
+           i.icon-flickr-circled
+          a(href="#" class=".footer__right-social-twitter")
+            i.icon-twitter-circled
+          a(href="#" class=".footer__right-social-fb")
+            i.icon-facebook-circled
+          a(href="#" class=".footer__right-social-pinterest")
+            i.icon-pinterest-circled
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
     script(src="libs/slick/slick.min.js")
     script(src="assets/js/main.js")
