@@ -2,6 +2,19 @@
   display: flex;
   align-items: stretch;
 
+  @include lg {
+    flex-direction: column;
+    height: 115vh;
+  }
+
+  @include md {
+    height: 200vh;
+  }
+  
+  @include xs {
+    height: 230vh; // d
+  }
+
   &__shop {
     padding: 130px 90px 130px 125px;
     width: 50%;
@@ -10,6 +23,18 @@
     align-items: center;
     background-size: cover;
     background-position-x: center;
+
+    @include lg {
+      width: 100%;
+      height: 50vh;
+      order: 2;
+    }
+
+    @include md {
+      padding: 40px 90px 40px 40px;
+      height: 100vh;
+      background-position-x: 68%;
+    }
 
     &-left-part {
 
@@ -69,11 +94,37 @@
     display: flex;
     justify-content: space-between;
 
+    @include xl {
+      padding: 75px 40px 60px 40px;
+    }
+
+    @include lg {
+      padding: 40px 90px;
+      height: 65vh;
+      width: 100%;
+    }
+
+    @include md {
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    @include xs {
+      padding: 40px 40px;
+      height: 130vh;
+    }
+
     &-form {
       width: 54.5%;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+
+      @include md {
+        height: 50vh;
+        width: 100%;
+        justify-content: center;
+      }
 
       h4 {
         margin-top: 0;
@@ -97,6 +148,15 @@
         &:nth-child(2) {
           margin-left: 9px;
         }
+
+        @include xl {
+          width: 100%;
+
+          &:nth-child(2) {
+            margin-top: 12px;
+            margin-left: 0;
+          }
+        }
       }
 
       textarea {
@@ -116,6 +176,11 @@
         line-height: 16px;
         font-weight: 900;
         text-transform: uppercase;
+
+        @include md {
+         display: block;
+         margin: 0 auto;
+        }
       }
     }
 
@@ -125,6 +190,15 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      @include md {
+        height: 33vh;
+        width: 100%;
+      }
+
+      @include xs {
+        height: auto;
+      }
 
       &-login {
         display: block;

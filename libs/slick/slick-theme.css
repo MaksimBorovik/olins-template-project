@@ -60,6 +60,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (max-width: 991px) {
+  .slick-dots li button:before {
+    top: 50px;
+  }
+}
+
 .slick-dots li.slick-active button:before {
   opacity: 1;
   color: #fee489;

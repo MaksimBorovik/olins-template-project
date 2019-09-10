@@ -2,16 +2,12 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: $base-font;
-}
-
 body {
   font-family: $base-font
 }
 
 p {
-  color: #898989;
+  color: $color-dark-grey;
   margin: 0;
 }
 

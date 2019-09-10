@@ -1,16 +1,50 @@
 .main-about {
   display: flex;
   align-items: stretch;
+  
+  @include lg {
+    flex-direction: column;
+    max-height: 100vh; // min-
+  }
+
+  @include md {
+    max-height: 150vh;
+  }
 
   &__image {
     width: 50%;
     background-size: cover;
     background-position-x: center;
+
+    @include lg {
+      width: 100%;
+      height: 50vh;
+      order: 2;
+    }
+
+    // @include md {
+    //   height: 50vh;
+    // }
   }
 
   &__hello {
     padding: 133px 125px 125px 90px;
     width: 50%;
+
+    @include lg {
+      padding: 70px 90px;
+      max-height: 50vh;
+      width: 100%;
+    }
+
+    @include md {
+      padding: 40px 90px;
+      max-height: 100vh;
+    }
+
+    @include xs {
+      padding: 40px 40px;
+    }
 
     span {
       font-size: 25px;
@@ -27,6 +61,11 @@
 
     p {
       line-height: 24px;
+      text-align: justify;
+
+      @include xs {
+        line-height: 23px;
+      }
     }
   }
 }
