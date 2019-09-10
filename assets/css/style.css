@@ -1292,6 +1292,17 @@ span {
   .header-menu {
     top: 0;
   }
+  .header-menu__list {
+    width: 70%;
+    text-align: right;
+  }
+  .header-menu__list-item a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .header-menu__cart {
+    width: 10%;
+  }
   .slick-prev,
   .slick-next {
     visibility: hidden;

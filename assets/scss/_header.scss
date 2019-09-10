@@ -183,6 +183,11 @@
       width: 60%;
       text-align: center;
 
+      @include lg {
+        width: 70%;
+        text-align: right;
+      }
+
       &-item {
         display: inline-block; // 0 Убираем отступы между li
         font-size: 13px; // 2 Убираем отступы между li
@@ -194,6 +199,11 @@
           margin-right: 20px;
           color: inherit;
           text-decoration: none;
+
+          @include lg {
+            margin-left: 10px;
+            margin-right: 10px;
+          }
 
           &:hover,
           &:focus {
@@ -214,6 +224,10 @@
       margin-right: 45px;
       width: 20%;
       justify-content: flex-end;
+
+      @include lg {
+        width: 10%;
+      }
 
       @include xs {
         margin-right: 30px;

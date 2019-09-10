@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $('.header-slider').slick({
-    // autoplay: true,
+    autoplay: true,
     dots: true
   });
 
