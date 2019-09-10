@@ -53,18 +53,16 @@
             align-items: center;
             justify-content: flex-start;
             font-size: 350px;
-            color: rgba(115, 73, 91, 0.05);
-            font-family: 'Raleway', sans-serif;
+            color: rgba($color-dark-rose, 0.05);
             font-style: italic;
             font-weight: 900;
           }
 
           span {
             margin-bottom: 20px;
-            color: #7f5568;
+            color: $color-rose;
             font-size: 21px;
             font-style: italic;
-            font-family: 'Playfair Display', serif;
             line-height: 1;
             display: block;
           }
@@ -72,25 +70,23 @@
           h2 {
             margin: 0;
             font-size: 45px;
-            // color: #000000;
-            font-family:  'Raleway', sans-serif;
             font-weight: 900;
             text-transform: uppercase;
             line-height: 1.1;
-            text-shadow:rgba(255, 255, 255, 0.75) 0 0 1px;;
+            text-shadow: rgba(#ffffff, 0.75) 0 0 1px;;
           }
 
           &-link {
             margin-top: 20px;
             font-size: 16px;
-            font-family:  'Raleway', sans-serif;
             font-weight: 500;
 
             a {
               margin-left: 10px;
-              color: #7f5568;
+              color: $color-rose;
 
-              &:hover {
+              &:hover,
+              &:focus {
                 text-decoration: none;
               }
             }
@@ -106,16 +102,15 @@
     bottom: 0;
     width: 100%;
     height: 90px;
-    background-color: rgba(115, 72, 92, 0.9);
+    background-color: rgba($color-dark-rose, 0.9);
     display: flex;
     align-items: center;
 
     &__logo {
       margin-left: 45px;
-      color: #ffffff;
+      color: $color-white;
       display: block;
       font-size: 43px;
-      font-family: 'Raleway', sans-serif;
       font-style: italic;
       font-weight: 900;
       text-decoration: none;
@@ -131,8 +126,7 @@
       &-item {
         display: inline-block; // 0 Убираем отступы между li
         font-size: 13px; // 2 Убираем отступы между li
-        color: #ffffff;
-        font-family: 'Raleway', sans-serif;
+        color: $color-white;
         font-weight: 700;
 
         a {
@@ -141,14 +135,15 @@
           color: inherit;
           text-decoration: none;
 
-          &:hover {
-            color: #fee489;
+          &:hover,
+          &:focus {
+            color: $color-yellow;
             transition: all 0.3s ease-in-out;
           }
         }
 
         &.active {
-          color: #fee489;
+          color: $color-yellow;
         }
       }
     }
@@ -169,13 +164,14 @@
         text-align: center;
         line-height: 21px;
         font-size: 10px;
-        color: #7f5669;
-        font-family: Arial, Helvetica, sans-serif serif;
-        background-color: #fee489;
+        color: $color-rose;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        background-color: $color-yellow;
         text-decoration: none;
 
-        &:hover {
-          background-color: #ffffff;
+        &:hover,
+        &:focus {
+          background-color: $color-white;
           transition: all 0.3s ease-in-out;
         }
       }
@@ -188,7 +184,7 @@
 .slick-prev,
 .slick-next {
   font-size: 0;
-  background: rgba(0, 0, 0, 0.1) url(../img/left.svg) center center no-repeat;;
+  background: rgba($color-black, 0.1) url(../img/left.svg) center center no-repeat;;
   width: 42px;
   height: 42px;
   display: block;
@@ -201,8 +197,9 @@
   cursor: pointer;
   z-index: 1;
 
-  &:hover {
-    background: #fee489 url(../img/left_hover.svg) center center no-repeat;
+  &:hover,
+  &:focus {
+    background: $color-yellow url(../img/left_hover.svg) center center no-repeat;
   }
 }
 

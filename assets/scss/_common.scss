@@ -2,12 +2,19 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: $base-font;
+}
+
 body {
-  font-size: 14px;
-  font-family: 'Raleway', sans-serif;
+  font-family: $base-font
 }
 
 p {
   color: #898989;
   margin: 0;
+}
+
+span {
+  font-family: $secondary-font;
 }
