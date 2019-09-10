@@ -115,10 +115,6 @@
         list-style: none;
         column-count: 2;
 
-        @include sm {
-          column-count: 1;
-        }
-
         &-item {
           font-size: 10px;  
           font-weight: 700;
