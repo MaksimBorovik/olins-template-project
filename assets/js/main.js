@@ -54,4 +54,29 @@ $(document).ready(function(){
       // instead of a settings object
     ]
   });
+
+  function loadInHeaderButtons() {
+    $(".header-menu__hamburger-toggle").click(function () {
+      openMenu();
+    });
+  }
+  
+  function openMenu() {
+    var isHeaderOpen = $(".header-menu__hamburger-toggle").hasClass("active");
+    if (!isHeaderOpen) {
+      $(".header-menu__hamburger-toggle").addClass("active");
+      $(".header-menu").addClass("open");
+      $(".header-menu__list").addClass("open");
+      $(".header-menu__mobile-social-media").addClass("open");
+    } else {
+      $(".header-menu__hamburger-toggle").removeClass("active");
+      $(".header-menu").removeClass("open");
+      $(".header-menu__list").removeClass("open");
+      $(".header-menu__mobile-social-media").removeClass("open");
+    }
+  }
+
+  loadInHeaderButtons();
+
+  
 });
