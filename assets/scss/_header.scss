@@ -312,6 +312,7 @@
       font-size: 0; // 1 Убираем отступы между li
       width: 60%;
       text-align: center;
+      transition-delay: 0.3s;
 
       @include lg {
         width: 70%;
@@ -320,18 +321,21 @@
 
       @include md {
         margin-top: 5vh;
-          margin-left: 5vh;
-          position: absolute;
+        margin-left: 5vh;
+        position: absolute;
+        top: -100vh;
+        left: 0;
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+
+        &.open {
           top: 10vh;
-          left: 0;
-          display: flex;
-          text-align: left;
-          flex-direction: column;
+        }
 
         &.open .header-menu__list-item {
           opacity: 1;
           transform: translateX(0);
-          transition-delay: 0.3s;
         }
       }
 

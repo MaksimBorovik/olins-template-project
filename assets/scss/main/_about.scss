@@ -4,11 +4,12 @@
   
   @include lg {
     flex-direction: column;
-    max-height: 100vh; // min-
+    max-height: 100vh;
   }
 
   @include md {
-    max-height: 150vh;
+    max-height: none;
+    height: auto;
   }
 
   &__image {
@@ -22,9 +23,9 @@
       order: 2;
     }
 
-    // @include md {
-    //   height: 50vh;
-    // }
+     //@include md {
+     //  height: auto;
+     //}
   }
 
   &__hello {
@@ -39,7 +40,8 @@
 
     @include md {
       padding: 40px 90px;
-      max-height: 100vh;
+      max-height: none;
+      height: auto;
     }
 
     @include xs {

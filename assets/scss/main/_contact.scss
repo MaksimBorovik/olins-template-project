@@ -8,11 +8,12 @@
   }
 
   @include md {
-    height: 200vh;
+    //height: 200vh;
+    height: auto;
   }
   
   @include xs {
-    height: 230vh; // d
+    //height: 230vh; // d
   }
 
   &__shop {
@@ -105,13 +106,12 @@
     }
 
     @include md {
-      height: 100vh;
+      height: auto;
       flex-direction: column;
     }
 
     @include xs {
       padding: 40px 40px;
-      height: 130vh;
     }
 
     &-form {
@@ -121,7 +121,7 @@
       flex-wrap: wrap;
 
       @include md {
-        height: 50vh;
+        height: auto;
         width: 100%;
         justify-content: center;
       }
@@ -192,12 +192,9 @@
       align-items: center;
 
       @include md {
-        height: 33vh;
-        width: 100%;
-      }
-
-      @include xs {
+        padding-top: 40px;
         height: auto;
+        width: 100%;
       }
 
       &-login {

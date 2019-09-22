@@ -8,7 +8,8 @@
   }
 
   @include md {
-    max-height: 200vh;
+    max-height: none;
+    height: auto;
   }
 
   &__advantages {
@@ -24,7 +25,8 @@
     }
 
     @include md {
-      max-height: 150vh;
+      max-height: none;
+      height: auto;
     }
 
     @include xs {
@@ -115,7 +117,7 @@
     }
 
     @include md {
-      max-height: 50vh;
+      height: auto;
     }
 
     @include xs {

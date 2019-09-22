@@ -759,6 +759,9 @@ span {
   font-size: 0;
   width: 60%;
   text-align: center;
+  -webkit-transition-delay: 0.3s;
+       -o-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
 
 .header-menu__list-item {
@@ -1640,7 +1643,7 @@ span {
     margin-top: 5vh;
     margin-left: 5vh;
     position: absolute;
-    top: 10vh;
+    top: -100vh;
     left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1651,14 +1654,14 @@ span {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .header-menu__list.open {
+    top: 10vh;
+  }
   .header-menu__list.open .header-menu__list-item {
     opacity: 1;
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
-    -webkit-transition-delay: 0.3s;
-         -o-transition-delay: 0.3s;
-            transition-delay: 0.3s;
   }
   .header-menu__list-item {
     margin-top: 35px;
@@ -1705,26 +1708,30 @@ span {
             transition-delay: 0.4s;
   }
   .main-about {
-    max-height: 150vh;
+    max-height: none;
+    height: auto;
   }
   .main-about__hello {
     padding: 40px 90px;
-    max-height: 100vh;
+    max-height: none;
+    height: auto;
   }
   .main-features {
-    max-height: 200vh;
+    max-height: none;
+    height: auto;
   }
   .main-features__advantages {
-    max-height: 150vh;
+    max-height: none;
+    height: auto;
   }
   .main-features__advantages-list {
     text-align: justify;
   }
   .main-features__team {
-    max-height: 50vh;
+    height: auto;
   }
   .main-contact {
-    height: 200vh;
+    height: auto;
   }
   .main-contact__shop {
     padding: 40px 90px 40px 40px;
@@ -1732,14 +1739,14 @@ span {
     background-position-x: 68%;
   }
   .main-contact__feedback {
-    height: 100vh;
+    height: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
   .main-contact__feedback-form {
-    height: 50vh;
+    height: auto;
     width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1750,7 +1757,8 @@ span {
     margin: 0 auto;
   }
   .main-contact__feedback-twitter {
-    height: 33vh;
+    padding-top: 40px;
+    height: auto;
     width: 100%;
   }
   .footer__left {
@@ -1826,15 +1834,8 @@ span {
     margin-top: 10px;
     margin-bottom: 0;
   }
-  .main-contact {
-    height: 230vh;
-  }
   .main-contact__feedback {
     padding: 40px 40px;
-    height: 130vh;
-  }
-  .main-contact__feedback-twitter {
-    height: auto;
   }
   .footer__left {
     padding-right: 24px;
