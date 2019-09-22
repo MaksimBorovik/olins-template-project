@@ -1071,18 +1071,18 @@ span {
   transition: bottom 0.3s ease-in-out;
 }
 
-.main-features__team-slider-item-spoiler .icon-twitter-circled {
-  margin: 0 5px;
+.main-features__team-slider-item-spoiler .icon-twitter-circled,
+.main-features__team-slider-item-spoiler .icon-facebook-circled {
+  margin: 0 10px;
   display: block;
-  font-size: 20px;
-  color: #ffffff;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.main-features__team-slider-item-spoiler .icon-facebook-circled {
-  margin: 0 5px;
-  display: block;
-  font-size: 20px;
-  color: #ffffff;
+.main-features__team-slider-item-spoiler .icon-twitter-circled:hover, .main-features__team-slider-item-spoiler .icon-twitter-circled:focus,
+.main-features__team-slider-item-spoiler .icon-facebook-circled:hover,
+.main-features__team-slider-item-spoiler .icon-facebook-circled:focus {
+  color: white;
 }
 
 .main-features__team-slider-item-caption {
@@ -1518,7 +1518,6 @@ span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-height: 100vh;
   }
   .main-about__image {
     width: 100%;
@@ -1529,7 +1528,6 @@ span {
   }
   .main-about__hello {
     padding: 70px 90px;
-    max-height: 50vh;
     width: 100%;
   }
   .main-features {
@@ -1537,11 +1535,9 @@ span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-height: 100vh;
   }
   .main-features__advantages {
     padding: 40px 90px;
-    max-height: 50vh;
     width: 100%;
   }
   .main-features__advantages-list {
@@ -1559,7 +1555,6 @@ span {
   .main-features__team {
     padding: 44px 90px;
     width: 100%;
-    height: 50vh;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -1569,18 +1564,15 @@ span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 115vh;
   }
   .main-contact__shop {
     width: 100%;
-    height: 50vh;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
   .main-contact__feedback {
     padding: 40px 90px;
-    height: 65vh;
     width: 100%;
   }
   .footer__left {
@@ -1703,31 +1695,11 @@ span {
          -o-transition-delay: 0.4s;
             transition-delay: 0.4s;
   }
-  .main-about {
-    max-height: none;
-    height: auto;
-  }
   .main-about__hello {
     padding: 40px 90px;
-    max-height: none;
-    height: auto;
-  }
-  .main-features {
-    max-height: none;
-    height: auto;
-  }
-  .main-features__advantages {
-    max-height: none;
-    height: auto;
   }
   .main-features__advantages-list {
     text-align: justify;
-  }
-  .main-features__team {
-    height: auto;
-  }
-  .main-contact {
-    height: auto;
   }
   .main-contact__shop {
     padding: 40px 90px 40px 40px;
@@ -1735,14 +1707,12 @@ span {
     background-position-x: 68%;
   }
   .main-contact__feedback {
-    height: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
   .main-contact__feedback-form {
-    height: auto;
     width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1754,7 +1724,6 @@ span {
   }
   .main-contact__feedback-twitter {
     padding-top: 40px;
-    height: auto;
     width: 100%;
   }
   .footer__left {

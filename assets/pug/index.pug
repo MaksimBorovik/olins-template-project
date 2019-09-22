@@ -1,3 +1,7 @@
+mixin sm-icon(link, item)
+  a(href=link)
+    i(class='icon-' + item + '-circled')
+
 <!DOCTYPE html>
 html(lang="en")
   head
@@ -16,70 +20,27 @@ html(lang="en")
   body
     header(class="header")
       .header-slider
-        .header-slider__item
-          figure
-            //- img(src="assets/img/slider.jpg", alt="slider-image")
-            div(class="header-slider__item-image" style="background-image: url(assets/img/slider1.jpg)")
-            figcaption.header-slider__item-category
-              .header-slider__item-category-info
-                span announcement
-                h2 There are many 
-                  br
-                  | variations of passages 
-                  br
-                  | of Lorem Ipsum
-                .header-slider__item-category-info-link
-                  svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px") 
-                    path(fill-rule="evenodd"  fill="rgb(254, 228, 137)" d="M9.165,4.946 C9.165,5.274 8.996,5.549 8.751,5.729 L5.489,8.990 C5.104,9.376 4.480,9.376 4.095,8.990 C3.710,8.605 3.710,7.981 4.095,7.596 L5.758,5.933 L1.277,5.933 C0.732,5.933 0.291,5.492 0.291,4.946 C0.291,4.402 0.732,3.961 1.277,3.961 L5.857,3.961 L4.094,2.198 C3.709,1.812 3.709,1.188 4.094,0.803 C4.479,0.418 5.104,0.418 5.489,0.803 L8.867,4.181 C9.043,4.357 9.123,4.583 9.138,4.813 C9.145,4.858 9.165,4.899 9.165,4.946 Z")
-                  a(href="#") Details
-        .header-slider__item
-          figure
-            //- img(src="assets/img/slider.jpg", alt="slider-image")
-            div(class="header-slider__item-image" style="background-image: url(assets/img/slider2.jpg)")
-            figcaption.header-slider__item-category
-              .header-slider__item-category-info
-                span announcement
-                h2 There are many 
-                  br
-                  | variations of passages 
-                  br
-                  | of Lorem Ipsum
-                .header-slider__item-category-info-link
-                  svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px") 
-                    path(fill-rule="evenodd"  fill="rgb(254, 228, 137)" d="M9.165,4.946 C9.165,5.274 8.996,5.549 8.751,5.729 L5.489,8.990 C5.104,9.376 4.480,9.376 4.095,8.990 C3.710,8.605 3.710,7.981 4.095,7.596 L5.758,5.933 L1.277,5.933 C0.732,5.933 0.291,5.492 0.291,4.946 C0.291,4.402 0.732,3.961 1.277,3.961 L5.857,3.961 L4.094,2.198 C3.709,1.812 3.709,1.188 4.094,0.803 C4.479,0.418 5.104,0.418 5.489,0.803 L8.867,4.181 C9.043,4.357 9.123,4.583 9.138,4.813 C9.145,4.858 9.165,4.899 9.165,4.946 Z")
-                  a(href="#") Details
-        .header-slider__item
-          figure
-            //- img(src="assets/img/slider.jpg", alt="slider-image")
-            div(class="header-slider__item-image" style="background-image: url(assets/img/slider3.jpg)")
-            figcaption.header-slider__item-category
-              .header-slider__item-category-info
-                span announcement
-                h2 There are many 
-                  br
-                  | variations of passages 
-                  br
-                  | of Lorem Ipsum
-                .header-slider__item-category-info-link
-                  svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px") 
-                    path(fill-rule="evenodd"  fill="rgb(254, 228, 137)" d="M9.165,4.946 C9.165,5.274 8.996,5.549 8.751,5.729 L5.489,8.990 C5.104,9.376 4.480,9.376 4.095,8.990 C3.710,8.605 3.710,7.981 4.095,7.596 L5.758,5.933 L1.277,5.933 C0.732,5.933 0.291,5.492 0.291,4.946 C0.291,4.402 0.732,3.961 1.277,3.961 L5.857,3.961 L4.094,2.198 C3.709,1.812 3.709,1.188 4.094,0.803 C4.479,0.418 5.104,0.418 5.489,0.803 L8.867,4.181 C9.043,4.357 9.123,4.583 9.138,4.813 C9.145,4.858 9.165,4.899 9.165,4.946 Z")
-                  a(href="#") Details
+        - var slider1 = ['slider1.jpg', 'slider2.jpg', 'slider3.jpg']
+        - for (var i=0; i<slider1.length; i++) {
+          .header-slider__item
+            figure
+              div(class="header-slider__item-image" style="background-image: url(assets/img/" + slider1[i] + ")")
+              figcaption.header-slider__item-category
+                .header-slider__item-category-info
+                  span announcement
+                  h2 There are many
+                    br
+                    | variations of passages
+                    br
+                    | of Lorem Ipsum
+                  .header-slider__item-category-info-link
+                    svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px")
+                      path(fill-rule="evenodd"  fill="rgb(254, 228, 137)" d="M9.165,4.946 C9.165,5.274 8.996,5.549 8.751,5.729 L5.489,8.990 C5.104,9.376 4.480,9.376 4.095,8.990 C3.710,8.605 3.710,7.981 4.095,7.596 L5.758,5.933 L1.277,5.933 C0.732,5.933 0.291,5.492 0.291,4.946 C0.291,4.402 0.732,3.961 1.277,3.961 L5.857,3.961 L4.094,2.198 C3.709,1.812 3.709,1.188 4.094,0.803 C4.479,0.418 5.104,0.418 5.489,0.803 L8.867,4.181 C9.043,4.357 9.123,4.583 9.138,4.813 C9.145,4.858 9.165,4.899 9.165,4.946 Z")
+                    a(href="#") Details
+        - }
       nav.header-menu
         .header-menu-wrapper
           a.header-menu__logo(href="#") Olins
-          //- ul.header-menu__list
-          //-   li.header-menu__list-item.active
-          //-     a(href="#") HOME
-          //-   li.header-menu__list-item
-          //-     a(href="#") ABOUT US
-          //-   li.header-menu__list-item
-          //-     a(href="#") WORKS
-          //-   li.header-menu__list-item
-          //-     a(href="#") BLOG
-          //-   li.header-menu__list-item
-          //-     a(href="#") STORE
-          //-   li.header-menu__list-item
-          //-     a(href="#") CONTACT
           .header-menu__hamburger
             .header-menu__hamburger-toggle
               .header-menu__hamburger-toggle-burger
@@ -90,17 +51,13 @@ html(lang="en")
                 span
                 span
           .header-menu__mobile-social-media
-            a(href="#")
-              i.icon-flickr-circled
-            a(href="#")
-              i.icon-twitter-circled
-            a(href="#")
-              i.icon-facebook-circled
-            a(href="#")
-              i.icon-pinterest-circled
+            +sm-icon('#', 'flickr')
+            +sm-icon('#', 'twitter')
+            +sm-icon('#', 'facebook')
+            +sm-icon('#', 'pinterest')
           - var items = ['HOME', 'ABOUT US', 'WORKS','BLOG','STORE','CONTACT']
-              ul.header-menu__list    
-                - for (var i=0; i<items.length; i++) {     
+              ul.header-menu__list
+                - for (var i=0; i<items.length; i++) {
                     li.header-menu__list-item
                       a(href="#")= items[i]
                 - }
@@ -133,84 +90,20 @@ html(lang="en")
         .main-features__team
           .main-features__team-buttons
           .main-features__team-slider
-            .main-features__team-slider-item
-              figure
-                .main-features__team-slider-item-wrapper
-                  .main-features__team-slider-item-wrapper-inline-block
-                    img(src="assets/img/team_1.jpg", alt="team-image").main-features__team-slider-item-image
-                    .main-features__team-slider-item-spoiler
-                      a(href="#")
-                        i.icon-twitter-circled
-                      a(href="#")
-                        i.icon-facebook-circled
-                figcaption.main-features__team-slider-item-caption
-                  h4 Aubrey Ramirez
-                  span designer
-            .main-features__team-slider-item
-              figure
-                .main-features__team-slider-item-wrapper
-                  .main-features__team-slider-item-wrapper-inline-block
-                    img(src="assets/img/team_2.jpg", alt="team-image").main-features__team-slider-item-image
-                    .main-features__team-slider-item-spoiler
-                      a(href="#")
-                        i.icon-twitter-circled
-                      a(href="#")
-                        i.icon-facebook-circled
-                figcaption.main-features__team-slider-item-caption
-                  h4 Aubrey Ramirez
-                  span designer
-            .main-features__team-slider-item
-              figure
-                .main-features__team-slider-item-wrapper
-                  .main-features__team-slider-item-wrapper-inline-block
-                    img(src="assets/img/team_3.jpg", alt="team-image").main-features__team-slider-item-image
-                    .main-features__team-slider-item-spoiler
-                      a(href="#")
-                        i.icon-twitter-circled
-                      a(href="#")
-                        i.icon-facebook-circled
-                figcaption.main-features__team-slider-item-caption
-                  h4 Aubrey Ramirez
-                  span designer
-            .main-features__team-slider-item
-              figure
-                .main-features__team-slider-item-wrapper
-                  .main-features__team-slider-item-wrapper-inline-block
-                    img(src="assets/img/team_1.jpg", alt="team-image").main-features__team-slider-item-image
-                    .main-features__team-slider-item-spoiler
-                      a(href="#")
-                        i.icon-twitter-circled
-                      a(href="#")
-                        i.icon-facebook-circled
-                figcaption.main-features__team-slider-item-caption
-                  h4 Aubrey Ramirez
-                  span designer
-            .main-features__team-slider-item
-              figure
-                .main-features__team-slider-item-wrapper
-                  .main-features__team-slider-item-wrapper-inline-block
-                    img(src="assets/img/team_2.jpg", alt="team-image").main-features__team-slider-item-image
-                    .main-features__team-slider-item-spoiler
-                      a(href="#")
-                        i.icon-twitter-circled
-                      a(href="#")
-                        i.icon-facebook-circled
-                figcaption.main-features__team-slider-item-caption
-                  h4 Aubrey Ramirez
-                  span designer
-            .main-features__team-slider-item
-              figure
-                .main-features__team-slider-item-wrapper
-                  .main-features__team-slider-item-wrapper-inline-block
-                    img(src="assets/img/team_3.jpg", alt="team-image").main-features__team-slider-item-image
-                    .main-features__team-slider-item-spoiler
-                      a(href="#")
-                        i.icon-twitter-circled
-                      a(href="#")
-                        i.icon-facebook-circled
-                figcaption.main-features__team-slider-item-caption
-                  h4 Aubrey Ramirez
-                  span designer
+            - var slider2 = ['team_1.jpg', 'team_2.jpg', 'team_3.jpg', 'team_1.jpg', 'team_2.jpg', 'team_3.jpg']
+            - for (var i=0; i<slider2.length; i++) {
+              .main-features__team-slider-item
+                figure
+                  .main-features__team-slider-item-wrapper
+                    .main-features__team-slider-item-wrapper-inline-block
+                      img.main-features__team-slider-item-image(src="assets/img/" + slider2[i], alt="team-image")
+                      .main-features__team-slider-item-spoiler
+                        +sm-icon('#', 'twitter')
+                        +sm-icon('#', 'facebook')
+                  figcaption.main-features__team-slider-item-caption
+                    h4 Aubrey Ramirez
+                    span designer
+            - }
       section.main-contact
         .main-contact__shop(style="background-image: url(assets/img/shop.jpg);")
           .main-contact__shop-left-part
@@ -253,14 +146,10 @@ html(lang="en")
               - }
       .footer__right
         .footer__right-social
-          a(href="#" class=".footer__right-social-flickr")
-           i.icon-flickr-circled
-          a(href="#" class=".footer__right-social-twitter")
-            i.icon-twitter-circled
-          a(href="#" class=".footer__right-social-fb")
-            i.icon-facebook-circled
-          a(href="#" class=".footer__right-social-pinterest")
-            i.icon-pinterest-circled
+          +sm-icon('#', 'flickr')
+          +sm-icon('#', 'twitter')
+          +sm-icon('#', 'facebook')
+          +sm-icon('#', 'pinterest')
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
     script(src="libs/slick/slick.min.js")
     script(src="assets/js/main.js")
