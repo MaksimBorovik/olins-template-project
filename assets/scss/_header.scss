@@ -158,8 +158,13 @@
 
     @include lg {
       position: fixed;
-      height: 10vh;
+
+      //height: 10vh;
       top: 0;
+    }
+
+    @include md-h {
+      height: 15vh;
     }
 
     &.open {
@@ -173,8 +178,8 @@
       align-items: center;
       justify-content: space-between;
 
-      @include lg {
-        height: 10vh;
+      @include md-h {
+        height: 15vh;
       }
     }
 
@@ -376,6 +381,10 @@
           transform: translateX(-100%);
         }
 
+        @include md-h {
+          margin-top: 20px;
+        }
+
         a {
           margin-left: 20px;
           margin-right: 20px;
@@ -451,10 +460,15 @@
         position: absolute;
         display: flex;
         left: calc(50% - 32.5%);
-        bottom: 16vh;
+        bottom: 13vh;
         flex-direction: row;
         justify-content: space-between;
         width: 65%;
+
+        @include md-h {
+          left: calc(50% - 25%);
+          width: 50%;
+        }
 
         a {
           font-size: 35px;

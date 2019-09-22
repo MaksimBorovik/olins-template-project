@@ -79,6 +79,12 @@
   }
 }
 
+@mixin md-h {
+  @media (max-width: $md - 1) and (orientation: landscape) {
+    @content;
+  }
+}
+
 @mixin md-sm {
   @media (max-width: $md - 1) and (min-width: $sm) {
     @content;

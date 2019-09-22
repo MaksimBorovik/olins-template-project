@@ -1499,11 +1499,7 @@ span {
   }
   .header-menu {
     position: fixed;
-    height: 10vh;
     top: 0;
-  }
-  .header-menu-wrapper {
-    height: 10vh;
   }
   .header-menu__list {
     width: 70%;
@@ -1682,7 +1678,7 @@ span {
     display: -ms-flexbox;
     display: flex;
     left: calc(50% - 32.5%);
-    bottom: 16vh;
+    bottom: 13vh;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1790,6 +1786,25 @@ span {
   }
   .footer__right-social a:last-of-type {
     padding-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) and (max-width: 767px) and (orientation: landscape) {
+  .header-menu__mobile-social-media {
+    left: calc(50% - 25%);
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .header-menu {
+    height: 15vh;
+  }
+  .header-menu-wrapper {
+    height: 15vh;
+  }
+  .header-menu__list-item {
+    margin-top: 20px;
   }
 }
 
